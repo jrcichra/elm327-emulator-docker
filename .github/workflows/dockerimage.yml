@@ -16,3 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build and push the Docker image
       run: bash -x ci.sh
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
